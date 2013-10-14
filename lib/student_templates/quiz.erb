@@ -1,12 +1,12 @@
 <html>
 <head>
   <title>Flatiron Name Game</title>
-  <link rel="stylesheet" href="style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="../style.css" type="text/css" media="all">
   <meta charset="utf-8">
 </head>
   <body>
     <div class = "wrapper">
-      <div class = "left">
+      <div class = "center">
         <div class = "student"> <% temp = s.random_image %>
           <a href= <%= temp[0] == s.image ? s.next_url : "#" %>><img width="304" height="304" src="<%= temp[0] %>"></a>
           <a href= <%= temp[1] == s.image ? s.next_url : "#" %>><img width="304" height="304" src="<%= temp[1] %>"></a>
