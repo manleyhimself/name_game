@@ -10,6 +10,9 @@ scraper.array.each do |student_arr|
   end
 end
 
+index_page = ERB.new(File.open('lib/student_templates/index.erb').read)
+File.open("_site/index.html", "w+") << index_page.result(binding)
+
 student_quiz = ERB.new(File.open('lib/student_templates/quiz.erb').read)
 students = Student.all
 
@@ -19,4 +22,4 @@ students.each do |s|
   end
 end
 
-binding.pry
+# binding.pry
