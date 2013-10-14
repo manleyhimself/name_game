@@ -23,11 +23,12 @@ text-align: center;
     margin-top: 200px;
 }
 
+.index_center a:hover{
+    font-size: 20px;
+}
+
 .student img:hover{
     width: 320px;
     height: 320px;
 
 }
-/*.center h2:hover{
-    font-size: 26px
-}*/
