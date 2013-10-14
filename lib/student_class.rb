@@ -1,6 +1,3 @@
-require 'sqlite3'
-require 'pry'
-
 class Student
   attr_accessor :name, :image, :id
 
@@ -76,5 +73,6 @@ class Student
     result.flatten! << self.image
     result.shuffle
   end
+
 
 end

@@ -7,9 +7,9 @@
     <div class = "wrapper">
       <div class = "left">
         <div class = "student"> <% temp = s.random_image %>
-          <img width="304" height="304" src="<%= temp[0] %>">
-          <img width="304" height="304" src="<%= temp[1] %>">
-          <img width="304" height="304" src="<%= temp[2] %>">
+          <a href= <%= temp[0] == s.image ? "correct" : "incorrect" %>><img width="304" height="304" src="<%= temp[0] %>"></a>
+          <a href= <%= temp[1] == s.image ? "correct" : "incorrect" %>><img width="304" height="304" src="<%= temp[1] %>"></a>
+          <a href= <%= temp[2] == s.image ? "correct" : "incorrect" %>><img width="304" height="304" src="<%= temp[2] %>"></a>
           <h2> <%= s.name %> </h2>
         </div>
       </div>
