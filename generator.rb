@@ -18,3 +18,5 @@ students.each do |s|
     f << student_quiz.result(binding)
   end
 end
+
+binding.pry
