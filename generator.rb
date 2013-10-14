@@ -14,7 +14,7 @@ student_quiz = ERB.new(File.open('lib/student_templates/quiz.erb').read)
 students = Student.all
 
 students.each do |s|
-  File.open("_site/students/#{s.url}.html", 'w+') do |f|
+  File.open("_site/students/#{s.url}", 'w+') do |f|
     f << student_quiz.result(binding)
   end
 end

@@ -64,7 +64,7 @@ class Student
   end
 
   def url
-    self.name.gsub(" ","-")
+    self.name.gsub(" ","-") + ".html"
   end
 
   def random_image
@@ -74,5 +74,13 @@ class Student
     result.shuffle
   end
 
+  def next_url
+    i = Student.all.index(self)
+    Student.all[i] == Student.all[-1] ? Student.all[0].url : Student.all[i+1].url
+  end
+
+  def ==(other_student)
+    self.id == other_student.id
+  end 
 
 end
