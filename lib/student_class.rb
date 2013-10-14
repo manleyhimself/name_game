@@ -66,5 +66,8 @@ class Student
     end
   end
 
-end
+  def url
+    self.name.gsub(" ","-")
+  end
 
+end
