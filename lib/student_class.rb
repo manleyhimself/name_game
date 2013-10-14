@@ -70,4 +70,11 @@ class Student
     self.name.gsub(" ","-")
   end
 
+  def random_image
+    sql = "SELECT image FROM students WHERE id != ? ORDER BY RANDOM() LIMIT 2"
+    result = @@db.execute(sql, self.id)
+    result.flatten! << self.image
+    result.shuffle
+  end
+
 end
